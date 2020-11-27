@@ -24,6 +24,10 @@ proper instructions.
 `pip3 install -r requirements.txt`
 
 ##### Usage
+ - Run Tests with the option coverage: 
+ inside the folder martix, run the command:
+ 
+` python3 -m pytest tests/ -v --cov tests/`
 
 [...]
 
