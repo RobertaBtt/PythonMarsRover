@@ -1,18 +1,30 @@
-#A Command performes instructions to a subject
+# A Command performes instructions to a subject
 
 class Command:
 
-    def do_execute(self, subject, parameters):
-        if parameters is not None and isinstance(parameters, str):
-            if len(parameters) > 0:
-                for parameter in parameters:
-                    subject_generator = self._compute(subject, parameter)
-                    subject = next(subject_generator)
+    def execute(self, subject, parameters):
+
+        if self.parameters_are_ok(parameters):
+
+            for parameter in parameters:
+                subject = next(self._calculate(subject, parameter))
+                
         return subject
 
-    def _compute(self, subject, parameter):
+
+    def parameters_are_ok(self, parameters):
+
+        if parameters is not None and isinstance(parameters, str):
+            if len(parameters) > 0:
+                return True
+        return False
+
+
+    def _calculate(self, subject, parameter):
+
         x, y, direction = subject
         if parameter == "F":
             if direction == "EAST":
-                yield (int(x)+1, int(y), direction)
-        yield (x,y,direction)
+                yield (int(x) + 1, int(y), direction)
+        yield (x, y, direction)
+

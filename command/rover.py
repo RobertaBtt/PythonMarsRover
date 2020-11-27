@@ -9,6 +9,6 @@ class Rover:
         return self._state
 
     def move(self, parameters):
-        self._state = command.Command().do_execute(self._state, parameters)
+        self._state = command.Command().execute(self._state, parameters)
 
 
