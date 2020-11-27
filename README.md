@@ -27,7 +27,8 @@ proper instructions.
  - Run Tests with the option coverage: 
  inside the folder martix, run the command:
  
-` python3 -m pytest tests/ -v --cov tests/`
+` python3 -m pytest tests/ -v --cov command`
+It gives the percentage of covering the entities in the command folder
 
 [...]
 
