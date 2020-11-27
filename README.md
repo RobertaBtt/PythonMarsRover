@@ -15,26 +15,11 @@ proper instructions.
 
 ###### Requirements
  - to have installed python3.x.x
- - to have installed pip3
 
-###### Installation
 
-`cd martix`
 
-`python3 -m venv .env_martix`
-
-`source .env_martix/bin/activate`
-
-`pip3 install -r requirements.txt`
-
-##### Run Test Coverage
-Inside the folder martix, run:
- 
-` python3 -m pytest tests/ -v --cov command`
-
-It gives the percentage of covering the entities in the command folder
-
-#### Run App
+### Run App:
+In a terminal, inside the martix folder:
 `python3 app.py`
 
 Insert coordinates in the form `3,4,EAST`
@@ -43,6 +28,24 @@ Insert command in the form `F`
 you can write as many 'F' as you want
 
 To interrupt console: CTRL+C
+
+
+
+##### Run Test Coverage
+ Install pip if you don't have it  and then:
+ 
+`cd martix`
+
+`python3 -m venv .env_martix`
+
+`source .env_martix/bin/activate`
+
+`pip3 install -r requirements.txt`
+ 
+` python3 -m pytest tests/ -v --cov command`
+
+
+
 
 ###### Deactivate the virtual env
 
