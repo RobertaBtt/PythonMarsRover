@@ -14,7 +14,18 @@ class CommandTest(TestCase):
          assert isinstance(self.command, command.Command)
 
     def test_execute(self):
-
         assert self.command.execute(self.object, "F") == (5,2,"EAST")
         assert self.command.execute(self.object, "FF") == (6,2,"EAST")
         assert self.command.execute(self.object, "FFF") == (7,2,"EAST")
+
+    def test_execute_long_string(self):
+        assert self.command.execute(self.object, "F" * 10000) == (10004, 2, "EAST")
+
+    def test_execute_none(self):
+        assert self.command.execute(self.object, None) == (4, 2, "EAST")
+
+    def test_execute_empty(self):
+        assert self.command.execute(self.object, "") == (4, 2, "EAST")
+
+    def test_execute_not_string(self):
+        assert self.command.execute(self.object, 4) == (4, 2, "EAST")
