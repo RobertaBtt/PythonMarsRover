@@ -14,9 +14,9 @@ class CommandReceiverTest(TestCase):
          assert isinstance(self.command_receiver, command_receiver.CommandReceiver)
 
     def test_get_state(self):
-         assert self.command_receiver.get_state() == (4,2,"EAST")
+         assert self.command_receiver.get_state() == init_state
          assert self.command_receiver.get_state != None
 
     def test_do_command(self):
           self.command_receiver.do_command("F")
-          assert self.command_receiver.get_state() == (7,2,"EAST")
+          assert self.command_receiver.get_state() == (5,2,"EAST")

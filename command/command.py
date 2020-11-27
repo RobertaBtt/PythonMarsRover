@@ -1,6 +1,7 @@
-#A Command performed in a subject, giving instructions
+#A Command performes instructions to a subject
+
 class Command:
-    def execute(self, subject, parameters):
+    def do_execute(self, subject, parameters):
 
         if parameters is not None and isinstance(parameters, str):
             if len(parameters) > 0:
@@ -13,4 +14,4 @@ class Command:
         x, y, direction = subject
         if parameter == "F":
             if direction == "EAST":
-                yield (x+1,y, direction)
+                yield (int(x)+1,int(y), direction)

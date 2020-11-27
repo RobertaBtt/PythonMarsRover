@@ -23,14 +23,22 @@ proper instructions.
 
 `pip3 install -r requirements.txt`
 
-##### Usage
+##### Run Test Coverage
  - Run Tests with the option coverage: 
  inside the folder martix, run the command:
  
 ` python3 -m pytest tests/ -v --cov command`
 It gives the percentage of covering the entities in the command folder
 
-[...]
+#### Run App
+`python3 app.py`
+
+Insert coordinates in the form `3,4,EAST`
+
+Insert command in the form `F`
+you can write as many 'F' as you want
+
+To interrupt console: CTRL+C
 
 ###### Deactivate the virtual env
 
