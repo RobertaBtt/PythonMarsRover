@@ -1,5 +1,6 @@
 from . import command
-class CommandReceiver:
+
+class Rover:
 
     def __init__(self, initial_state):
         self._state = initial_state
@@ -7,7 +8,7 @@ class CommandReceiver:
     def get_state(self):
         return self._state
 
-    def do_command(self, parameters):
+    def move(self, parameters):
         self._state = command.Command().do_execute(self._state, parameters)
 
 

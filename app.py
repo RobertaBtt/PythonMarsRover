@@ -1,4 +1,4 @@
-from command import command_receiver
+from command import rover
 
 if __name__ == '__main__':
 
@@ -6,13 +6,13 @@ if __name__ == '__main__':
 
     initial_state = tuple(input().split(","))
 
-    receiver = command_receiver.CommandReceiver(initial_state)
+    receiver = rover.Rover(initial_state)
 
     while True:
         print("the receiver is at the position", receiver.get_state())
         print("Write command:")
         command_parameters = input()
-        receiver.do_command(command_parameters)
+        receiver.move(command_parameters)
         print(receiver.get_state())
 
 
