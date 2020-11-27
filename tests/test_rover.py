@@ -38,3 +38,7 @@ class RoverTest(TestCase):
     def test_from_west(self):
         assert self.rover_west.get_state() == init_state_west
 
+    def test_move_from_west(self):
+        self.rover_west.move('ffff')
+        assert self.rover_west.get_state() == (4,0,"west")
+
