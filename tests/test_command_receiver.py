@@ -2,7 +2,7 @@ import pytest
 from command import command_receiver
 from unittest import TestCase
 
-init_state = 4,2,"EAST"
+init_state = (4,2,"EAST")
 
 class CommandReceiverTest(TestCase):
 
@@ -19,4 +19,4 @@ class CommandReceiverTest(TestCase):
 
     def test_do_command(self):
           self.command_receiver.do_command("F")
-          assert self.command_receiver.get_state() == (4,3,"EAST")
+          assert self.command_receiver.get_state() == (7,2,"EAST")
