@@ -25,3 +25,6 @@ class ValidatorTest(TestCase):
 
     def test_not_valid_parameters_empty(self):
         assert not v.Validator.parameters_are_ok("")
+
+    def test_valid_west_subject(self):
+        assert v.Validator.subject_is_ok((0,0,"west"))

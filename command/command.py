@@ -17,4 +17,6 @@ class Command:
         if parameter.upper() == "F":
             if direction.upper() == "EAST":
                 yield (int(x) + 1, int(y), direction)
+            elif direction.upper() == "WEST":
+                yield (int(x) -1, int(y), direction)
         yield (x, y, direction)

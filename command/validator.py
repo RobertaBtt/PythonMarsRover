@@ -1,6 +1,6 @@
 class Validator:
 
-    directions = ['EAST']
+    directions = ['EAST', 'WEST']
 
     @staticmethod
     def parameters_are_ok(parameters):

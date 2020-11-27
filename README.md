@@ -7,8 +7,12 @@
 Move an object in the two-dimensional space, giving to it
 proper instructions.
 - The object have initial and final coordinates `(x,y, direction)`
-- direction can be one of the follows` [EAST,SOUTH, WEST, NORTH]`
+- direction can be one of the follows` [EAST,WEST]`
 - The instruction is a command like `F` (Move forward)
+----
+ ![logo](Commands.png)
+------------
+
 ###### Requirements
  - to have installed python3.x.x
  - to have installed pip3
@@ -43,3 +47,6 @@ To interrupt console: CTRL+C
 ###### Deactivate the virtual env
 
 `deactivate`
+
+#### Future releases
+- To be able to move also in the ordinate axis (y) (NORTH,SOUTH)
