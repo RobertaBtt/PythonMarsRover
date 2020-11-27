@@ -24,10 +24,10 @@ proper instructions.
 `pip3 install -r requirements.txt`
 
 ##### Run Test Coverage
- - Run Tests with the option coverage: 
- inside the folder martix, run the command:
+Inside the folder martix, run:
  
 ` python3 -m pytest tests/ -v --cov command`
+
 It gives the percentage of covering the entities in the command folder
 
 #### Run App

@@ -1,30 +1,20 @@
-# A Command performes instructions to a subject
+# A Command performs instructions to a subject
+from . import validator
 
 class Command:
 
     def execute(self, subject, parameters):
 
-        if self.parameters_are_ok(parameters):
-
+        if validator.Validator.parameters_are_ok(parameters) and validator.Validator.subject_is_ok(subject):
             for parameter in parameters:
-                subject = next(self._calculate(subject, parameter))
-                
+                subject = next(self.__apply_execution(subject, parameter))
+
         return subject
 
-
-    def parameters_are_ok(self, parameters):
-
-        if parameters is not None and isinstance(parameters, str):
-            if len(parameters) > 0:
-                return True
-        return False
-
-
-    def _calculate(self, subject, parameter):
-
+    # Core logic
+    def __apply_execution(self, subject, parameter):
         x, y, direction = subject
-        if parameter == "F":
-            if direction == "EAST":
+        if parameter.upper() == "F":
+            if direction.upper() == "EAST":
                 yield (int(x) + 1, int(y), direction)
         yield (x, y, direction)
-

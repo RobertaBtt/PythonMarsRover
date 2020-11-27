@@ -1,4 +1,3 @@
-import pytest
 from command import rover
 from unittest import TestCase
 
@@ -29,4 +28,7 @@ class RoverTest(TestCase):
     def test_move_empty(self):
         self.rover.move("this is not a command")
         assert self.rover.get_state() == (4, 2, "EAST")
+
+    def test_rover_null(self):
+        assert self.rover_no.get_state() == None
 

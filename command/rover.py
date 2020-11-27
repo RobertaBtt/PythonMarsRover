@@ -3,12 +3,10 @@ from . import command
 class Rover:
 
     def __init__(self, initial_state):
-        self._state = initial_state
+        self.__state = initial_state
 
     def get_state(self):
-        return self._state
+        return self.__state
 
     def move(self, parameters):
-        self._state = command.Command().execute(self._state, parameters)
-
-
+        self.__state = command.Command().execute(self.__state, parameters)
